@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>57/70 Inventory</title> 
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/custom.css')}}">
+    <script src="{{url_for('static',filename='js/jquery.js')}}"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .error{ 
+            color: red;
+        }
+        
+body {
+    font-family: Verdana, Geneva, sans-serif;
+}
+    </style>
+    <title>{{title}}</title>
+</head>
+<body>
+    <!--<style>
+        th { 
+            padding: 15px;
+            margin: 0px;
+            border: solid 1px black;
+            }
+        td { 
+            padding: 15px;
+            margin: 0px;
+            border: solid 1px black;
+            }
+    </style>-->
+    <div class="container-fluid" style="background-image:linear-gradient(180deg,#A9DFBF,white);">
+    <div class="container">
+        <div class="row">
+            <div class="head" style="margin: 0 auto; width: 100%;">
+                <div>
+                    
+                </div>
+                      
+                <div class="navbar navbar-dark bg-dark rounded shadow p-3 mb-5">
+                    <div class="navbar-inner">
+                          <div class="container-fullwidth">          
+                              <ul class="nav">
+                                  <li>
+                                      <a class="navbar-brand" href="./"><img src="{{url_for('static',filename='img/logo.png')}}" height="100"></a>
+                                  </li>
+                                  <li>
+                                      <a class="nav-link" href="./addrecipe">Add Recipe</a>
+                                  </li>
+                                  <li>
+                                      <a class="nav-link" href="./addfermenter">Add Fermenter</a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

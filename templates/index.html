@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    
+    <div class='error'>{{message}}</div>
+    
+    <form method='post'>
+        <div class='form-group-row'>
+            <label class="col-2 col-form-label" for="recipe">Recipe</label>
+            <select class='form-control col-4' id='recipe' name='recipe'>
+                <option value=''></option>
+                {% for recipe in recipes %}
+                <option value="{{ recipe.id }}">{{ recipe.name }}</option>
+                {% endfor %}
+            </select>
+            <label class="col-2 col-form-label" for="pos">Fermenter #</label>
+            <select class='form-control col-1' id='pos' name='pos'>
+                <option value=''></option>
+                {% for fermenter  in fermenters %}
+                <option value="{{fermenter.pos}}">{{fermenter.pos}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+</div>
+{% endblock %}
