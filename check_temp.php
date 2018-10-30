@@ -44,9 +44,9 @@ foreach($fermenting as $ferm) {
 							}	
 						}
 					}
-				}
-			$c++; 
+				} 
 			}
+			$c++; 
 		}
 		$old_days=$days; 
 		if($c == count($segments) && $interval > $old_days) { 
